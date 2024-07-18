@@ -73,7 +73,7 @@ class TestServerInferenceAccuracy(unittest.TestCase):
         cls.mock_pyaudio = cls.mock_pyaudio_patch.start()
         cls.mock_pyaudio.return_value.open.return_value = mock.MagicMock()
         
-        cls.server_process = subprocess.Popen(["python", "run_server.py"])
+        cls.server_process = subprocess.Popen(["python3", "run_server.py"])
         time.sleep(2)
 
     @classmethod
